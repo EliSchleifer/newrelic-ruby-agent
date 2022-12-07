@@ -6,7 +6,28 @@
 # Note that changes in the inspected code, or installation of new
 # versions of RuboCop, may require this file to be generated again.
 
-# trunk manages the ignoring of pre-existing issues. the rubocop todo
-# file is therefore not needed with this setup.
+# rubocop todo does not have to be updated with trunk managed tech debt
+# cop configurations could be moved directly into rubocop.yml
 
-# Now the tech debt of the ruby issues is no longer hidden
+# Offense count: 412
+# Configuration parameters: AllowedMethods, AllowedPatterns, IgnoredMethods, CountRepeatedAttributes.
+Metrics/AbcSize:
+  Max: 54
+
+# This cop supports safe autocorrection (--autocorrect).
+Minitest/AssertInDelta:
+  Enabled: true
+
+# Offense count: 263
+Minitest/MultipleAssertions:
+  Max: 28
+
+# Offense count: 129
+# This cop supports safe autocorrection (--autocorrect).
+Minitest/RefutePredicate:
+  Enabled: false
+
+# Offense count: 27
+# This cop supports safe autocorrection (--autocorrect).
+Minitest/TestMethodName:
+  Enabled: false
